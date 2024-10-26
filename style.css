@@ -1,0 +1,61 @@
+
+/* Selector yang biasa dipakai untuk menampung css variables / custom properties */
+:root {
+    --color-main: #FF90BC;
+    --color-white: rgb(245, 243, 241);
+}
+
+html {
+    /*
+    Menyembunyikan element yang posisinya melebihi
+    lebar element pada sumbu X (horizontal)
+    */
+    overflow-x: hidden;
+}
+
+body {
+    /*
+    Satuan dvh (dynamic viewport height) sama seperti vh
+    tapi dapat menyesuaikan dengan tinggi toolbar pada mobile browser
+    yang dinamis
+    */
+    height: 100dvh;
+    font-family: sans-serif;
+    font-size: 16px;
+    line-height: 1.2;
+    overflow-x: hidden;
+    /* Cara memakai css variables dengan menggunakan var() */
+    background-color: var(--color-gray);
+}
+
+.font-decorative {
+    /* Mengaplikasikan google fonts */
+    font-family: 'Exo 2', serif;
+    color: white;
+}
+
+.font-decorative-product {
+    /* Mengaplikasikan google fonts */
+    font-family: 'Afacad', serif;
+    font-size: 14px;
+    color: black;
+}
+
+
+main {
+    padding-right: 2rem;
+    padding-left: 2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+/*
+Element dengan class "container" biasanya dipakai sebagai pembungkus element-element
+yang perlu dibatasi lebarnya, dst.
+*/
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1rem;
+}
